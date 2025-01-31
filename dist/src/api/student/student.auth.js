@@ -30,4 +30,10 @@ StudentAuth.update = Object.assign(Object.assign({}, auth_types_1.DefaultAuthOpt
 StudentAuth.del = Object.assign(Object.assign({}, auth_types_1.DefaultAuthOptions), { Context: `${_a._baseContext}.Delete`, Ownership: auth_types_1.ResourceOwnership.Student, 
     // ActionScope    : ActionScope.System,
     RequestType: auth_types_2.RequestType.DeleteOne });
+StudentAuth.upload = Object.assign(Object.assign({}, auth_types_1.DefaultAuthOptions), { Context: `${_a._baseContext}.Upload`, Ownership: auth_types_1.ResourceOwnership.Student, 
+    // ActionScope    : ActionScope.System,
+    RequestType: auth_types_2.RequestType.CreateOne });
+StudentAuth.download = Object.assign(Object.assign({}, auth_types_1.DefaultAuthOptions), { Context: `${_a._baseContext}.Download`, Ownership: auth_types_1.ResourceOwnership.Student, 
+    // ActionScope    : ActionScope.System,
+    RequestType: auth_types_2.RequestType.GetOne });
 //# sourceMappingURL=student.auth.js.map

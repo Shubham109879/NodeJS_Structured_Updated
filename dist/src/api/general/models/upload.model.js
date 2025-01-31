@@ -19,8 +19,8 @@ const mime_types_1 = __importDefault(require("mime-types"));
 class UploadModel {
     constructor() {
         this.getUploadModel = (req) => __awaiter(this, void 0, void 0, function* () {
-            // var currentStudentId = req.payload.id;
-            var currentStudentId = 1;
+            var currentStudentId = req.payload.id;
+            // var currentStudentId=1;
             console.log(currentStudentId);
             var models = [];
             var fileMetadataList = yield this.getFileMetadataList(req);

@@ -12,9 +12,9 @@ export class UploadModel{
 
     getUploadModel=async(req: express.Request): Promise<FileResourceUploadDomainModel[]> => {
 
-        // var currentStudentId = req.payload.id;
+        var currentStudentId = req.payload.id;
 
-        var currentStudentId=1;
+        // var currentStudentId=1;
 
         console.log(currentStudentId);
         var models: FileResourceUploadDomainModel[] = [];
