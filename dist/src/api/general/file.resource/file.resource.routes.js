@@ -17,7 +17,7 @@ const register = (app) => {
     const studentController = new student_controller_1.StudentController();
     router.post("/login", (0, auth_handler_1.auth)(student_auth_1.StudentAuth.loginStudent), studentController.loginStudent);
     router.post("/upload", (0, auth_handler_1.auth)(student_auth_1.StudentAuth.upload), controller.upload);
-    router.get("/download", controller.download);
+    router.get("/download", (0, auth_handler_1.auth)(student_auth_1.StudentAuth.download), controller.download);
     app.use("/api/v1/file-resources", router);
 };
 exports.register = register;

@@ -19,7 +19,7 @@ class DownloadModel {
             //     Disposition : disposition
             // };
             var metadata = {
-                ResourceId: 1,
+                ResourceId: request.payload.id,
                 Disposition: file_resource_types_1.DownloadDisposition.Attachment,
             };
             return metadata;

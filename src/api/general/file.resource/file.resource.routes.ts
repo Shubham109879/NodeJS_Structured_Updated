@@ -22,7 +22,7 @@ export const register=(app: express.Application)=>{
 
     router.post("/upload",auth(StudentAuth.upload),controller.upload);
 
-    router.get("/download",controller.download);
+    router.get("/download",auth(StudentAuth.download),controller.download);
 
     app.use("/api/v1/file-resources",router);
 }

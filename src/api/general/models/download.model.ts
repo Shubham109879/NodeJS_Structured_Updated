@@ -14,7 +14,7 @@ getDownloadMetaData = async (request: express.Request): Promise<FileResourceMeta
     // };
 
     var metadata: FileResourceMetadata = {
-        ResourceId  : 1,
+        ResourceId  : request.payload.id,
         Disposition : DownloadDisposition.Attachment,
     };
 
