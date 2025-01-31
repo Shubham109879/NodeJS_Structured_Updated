@@ -68,4 +68,12 @@ export class StudentAuth{
         // ActionScope    : ActionScope.System,
         RequestType    : RequestType.DeleteOne,
     };
+
+    static readonly upload: AuthOptions = {
+        ...DefaultAuthOptions,
+        Context        : `${this._baseContext}.Upload`,
+        Ownership      : ResourceOwnership.Student,
+        // ActionScope    : ActionScope.System,
+        RequestType    : RequestType.CreateOne,
+    };
 }
